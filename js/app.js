@@ -1,15 +1,6 @@
-/*
-    Vamos criar o um módulo através dessa função do angular.
-    Note que o segundo parâmetro é um vetor vazio, porém ele é indispensável.
-    O segundo parâmetro indica que estamos criando um módulo.
-*/
 var app = angular.module('todo', []);
 /*
-    Estamos criando um controller através dessa função do angular.
-    O primeiro parâmetro é o nome do controller, o segundo é uma função
-    que será executada na criação do controller.
-
-    Note que a função recebe um parâmetro chamado $scope. O angular
+    a função recebe um parâmetro chamado $scope. O angular
     preenche o valor dessa variável de acordo com o seu nome (é o que
     chamamos de injeção de dependências).
 */
@@ -36,12 +27,15 @@ app.controller('TodoController', function($scope){
 
     $scope.limparTarefas = function()
     {
+      //Remove todas as tarefas
       $scope.tarefas = [];
     };
 
     $scope.apagar = function(tarefa)
     {
+      //pega o index da tarefa
       var index = $scope.tarefas.indexOf(tarefa);
+       //Remove a tarefa selecionada
       $scope.tarefas.splice(index, 1 );
     };
 
