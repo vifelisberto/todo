@@ -1,4 +1,4 @@
 # Todo - Lista de Tarefas
-## AngularJS
+### AngularJS v1.6.4
 
 DEMO: https://vifelisberto.github.io/todo/index.html
