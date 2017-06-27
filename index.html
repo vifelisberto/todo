@@ -44,7 +44,7 @@
                         <!-- a diretiva ng-class insere classes dinamicamente no elemento.
                              Nesse caso, a classe 'feita' é adicionado quando item.feita é true -->
                         <!-- as chaves duplas '{{}}' servem para imprimir uma variável no HTML -->
-                        <li ng-repeat="item in tarefas" ng-click="fazerTarefa(item)" ng-class="{'feita': item.feita}">{{item.nome}} <i class="glyphicon glyphicon-remove" ng-click="apagar(item)"></i></li>
+                        <li ng-repeat="item in tarefas" ng-click="fazerTarefa(item)" ng-class="{'feita': item.feita}">{{item.nome}} <i class="glyphicon glyphicon-remove" ng-show="item.feita" ng-click="apagar(item)"></i></li>
                     </ul>
 
                     <!-- a diretiva ng-show exibe o elemento apenas se a condição informada for verdadeira -->

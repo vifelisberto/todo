@@ -17,7 +17,10 @@ app.controller('TodoController', function($scope){
           feita: false
       };
 
-      $scope.tarefas.push(tarefa);
+      if(tarefa.nome != ""){
+        $scope.tarefas.push(tarefa);
+        $scope.dados.nome = "";
+    }
     };
 
     $scope.fazerTarefa = function(tarefa)
